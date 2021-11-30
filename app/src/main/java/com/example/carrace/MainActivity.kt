@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var menu = findViewById<ImageButton>(R.id.start);
+        val menu = findViewById<ImageButton>(R.id.start)
         menu.setOnClickListener {
-            val cambiando= Intent(this,Menu::class.java)
+            val cambiando= Intent(this,SelectCar::class.java)
             startActivity(cambiando)
         }
     }

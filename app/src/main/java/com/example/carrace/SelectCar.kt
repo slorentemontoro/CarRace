@@ -1,26 +1,26 @@
 package com.example.carrace
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import pl.droidsonroids.gif.GifImageView
 
-class SliderCar : AppCompatActivity() {
+class SelectCar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_slider_car)
+        setContentView(R.layout.activity_select_car)
 
         val arrayCar = mutableListOf<Cars>()
-        var carGif = findViewById<GifImageView>(R.id.coches1)
+        var carGif = findViewById<GifImageView>(R.id.car)
+        var name = findViewById<TextView>(R.id.name)
         var acceleration = findViewById<ProgressBar>(R.id.accelerate)
         var maxSpeed = findViewById<ProgressBar>(R.id.maxspeed)
         var deceleration = findViewById<ProgressBar>(R.id.decelerate)
         var fuel = findViewById<ProgressBar>(R.id.fuel)
-        var sw_acc = findViewById<TextView>(R.id.acceleratevalue)
-        var sw_maxspeed = findViewById<TextView>(R.id.maxspeedvalue)
+        var sw_acc = findViewById<TextView>(R.id.accelerationvalue)
+        var sw_maxspeed = findViewById<TextView>(R.id.maxSpeedvalue)
         var sw_dece = findViewById<TextView>(R.id.deceleratevalue)
         var sw_fuel = findViewById<TextView>(R.id.fuelvalue)
         var next_car = findViewById<ImageButton>(R.id.arrow_post)
@@ -33,6 +33,7 @@ class SliderCar : AppCompatActivity() {
             maxSpeed.progress = coche.velocidadMaxima
             deceleration.progress = coche.desaceleracion
             fuel.progress = coche.gasolina
+            name.text = coche.nombre
             sw_acc.text = coche.aceleracion.toString()
             sw_dece.text = coche.desaceleracion.toString()
             sw_fuel.text = coche.gasolina.toString()
@@ -41,7 +42,7 @@ class SliderCar : AppCompatActivity() {
 
 
 
-        var posicion: Int = 0
+        var posicion = 0
         val BowserCar = Cars("Bowser", 100, 4, 10, 90, R.drawable.coche1)
         val PeachCar = Cars("Peach", 80, 10, 4, 70, R.drawable.coche2)
         val DonkeyCar = Cars("Donkey Kong", 100, 20, 10, 100, R.drawable.coche3)
@@ -54,10 +55,6 @@ class SliderCar : AppCompatActivity() {
         arrayCar.add(LuigiCar)
 
 
-        acceleration.max = 30
-        maxSpeed.max = 100
-        deceleration.max = 30
-        fuel.max = 100
         mostrarcoche(arrayCar[posicion])
 
 
@@ -80,5 +77,8 @@ class SliderCar : AppCompatActivity() {
                 mostrarcoche(arrayCar[posicion])
             }
         }
+
+
+
     }
 }

@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarRace">
         <activity
+            android:name=".SelectDriver"
+            android:exported="false" />
+        <activity
+            android:name=".SelectCircuit"
+            android:exported="false" />
+        <activity
+            android:name=".SelectCar"
+            android:exported="false" />
+        <activity
             android:name=".SliderCar"
             android:exported="false" />
         <activity
