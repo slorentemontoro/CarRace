@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace2/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace2/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace2/app/src/main/res/layout/activity_slider_car.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace2/app/src/main/res/layout/activity_slider_car.xml" value="0.4" />
       </map>
     </option>
   </component>
@@ -14,5 +14,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.4" />
+      </ProjectState>
+    </option>
   </component>
 </project>

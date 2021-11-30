@@ -12,39 +12,37 @@
         android:layout_width="139dp"
         android:layout_height="74dp"
         android:background="#00FFFFFF"
+        android:contentDescription="@string/concesionario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762"
-        app:srcCompat="@drawable/cocheicon"
-        android:contentDescription="@string/concesionario" />
+        app:layout_constraintVertical_bias="0.817"
+        app:srcCompat="@drawable/cocheicon" />
 
     <ImageButton
         android:id="@+id/Play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
+        android:contentDescription="@string/play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slider"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766"
-        app:srcCompat="@drawable/jugar"
-        android:contentDescription="@string/play" />
+        app:layout_constraintVertical_bias="0.821"
+        app:srcCompat="@drawable/jugar" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/slider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221"
         app:srcCompat="@drawable/fondo_coches" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
