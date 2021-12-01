@@ -21,11 +21,6 @@ class SelectCircuit : AppCompatActivity() {
         val next = findViewById<Button>(R.id.next)
 
 
-        next.setOnClickListener {
-            val cambiando= Intent(this,SelectCar::class.java)
-            startActivity(cambiando)
-        }
-
         fun showcircuit(coche: Circuit) {
             name.text = coche.nombre
             circuit.setImageResource(coche.image)
@@ -34,22 +29,23 @@ class SelectCircuit : AppCompatActivity() {
 
 
         var position = 0
-        val circuit1 = Circuit("Isla Choco", R.drawable.circuito1, 2000)
-        val circuit2 = Circuit("Playa Koopa", R.drawable.circuito2, 1000)
-        val circuit3 = Circuit("Castillo de Bowser", R.drawable.circuito3, 1500)
-        val circuit4 = Circuit("Prado Rosquilla", R.drawable.circuito4, 500)
-        val circuit5 = Circuit("Valle Fantasma", R.drawable.circuito5, 700)
+
+            val circuit1 = Circuit("Isla Choco", R.drawable.circuito1, 2000)
+            val circuit2 = Circuit("Playa Koopa", R.drawable.circuito2, 1000)
+            val circuit3 = Circuit("Castillo de Bowser", R.drawable.circuito3, 1500)
+            val circuit4 = Circuit("Prado Rosquilla", R.drawable.circuito4, 500)
+            val circuit5 = Circuit("Valle Fantasma", R.drawable.circuito5, 700)
+
+            arrayCircuit.add(circuit1)
+            arrayCircuit.add(circuit2)
+            arrayCircuit.add(circuit3)
+            arrayCircuit.add(circuit4)
+            arrayCircuit.add(circuit5)
 
 
-        arrayCircuit.add(circuit1)
-        arrayCircuit.add(circuit2)
-        arrayCircuit.add(circuit3)
-        arrayCircuit.add(circuit4)
-        arrayCircuit.add(circuit5)
+
 
         showcircuit(arrayCircuit[position])
-
-
 
         nextCircuit.setOnClickListener {
             position++
@@ -68,6 +64,13 @@ class SelectCircuit : AppCompatActivity() {
             } else {
                 showcircuit(arrayCircuit[position])
             }
+        }
+
+        next.setOnClickListener {
+            val cambiando= Intent(this,SelectCar::class.java)
+            val pista = Circuit(arrayCircuit[position].nombre, arrayCircuit[position].image, arrayCircuit[position].Distance)
+            startActivity(cambiando)
+
         }
 
     }
