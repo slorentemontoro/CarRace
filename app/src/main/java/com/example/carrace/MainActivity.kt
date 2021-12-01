@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val menu = findViewById<ImageButton>(R.id.start)
         menu.setOnClickListener {
-            val cambiando= Intent(this,SelectCar::class.java)
+            val cambiando= Intent(this,SelectCircuit::class.java)
             startActivity(cambiando)
         }
     }

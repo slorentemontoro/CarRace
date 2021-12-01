@@ -1,10 +1,11 @@
 package com.example.carrace
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import pl.droidsonroids.gif.GifImageView
 
 class SelectCar : AppCompatActivity() {
@@ -13,70 +14,72 @@ class SelectCar : AppCompatActivity() {
         setContentView(R.layout.activity_select_car)
 
         val arrayCar = mutableListOf<Cars>()
-        var carGif = findViewById<GifImageView>(R.id.car)
-        var name = findViewById<TextView>(R.id.name)
-        var acceleration = findViewById<ProgressBar>(R.id.accelerate)
-        var maxSpeed = findViewById<ProgressBar>(R.id.maxspeed)
-        var deceleration = findViewById<ProgressBar>(R.id.decelerate)
-        var fuel = findViewById<ProgressBar>(R.id.fuel)
-        var sw_acc = findViewById<TextView>(R.id.accelerationvalue)
-        var sw_maxspeed = findViewById<TextView>(R.id.maxSpeedvalue)
-        var sw_dece = findViewById<TextView>(R.id.deceleratevalue)
-        var sw_fuel = findViewById<TextView>(R.id.fuelvalue)
-        var next_car = findViewById<ImageButton>(R.id.arrow_post)
-        var previous_car = findViewById<ImageButton>(R.id.arrow_ant)
+        val carGif = findViewById<GifImageView>(R.id.car)
+        val name = findViewById<TextView>(R.id.name)
+        val acceleration = findViewById<ProgressBar>(R.id.accelerate)
+        val maxSpeed = findViewById<ProgressBar>(R.id.maxspeed)
+        val deceleration = findViewById<ProgressBar>(R.id.decelerate)
+        val fuel = findViewById<ProgressBar>(R.id.fuel)
+        val swacc = findViewById<TextView>(R.id.accelerationvalue)
+        val swmaxspeed = findViewById<TextView>(R.id.maxSpeedvalue)
+        val swdece = findViewById<TextView>(R.id.deceleratevalue)
+        val swfuel = findViewById<TextView>(R.id.fuelvalue)
+        val nextcar = findViewById<ImageButton>(R.id.arrow_post)
+        val previouscar = findViewById<ImageButton>(R.id.arrow_ant)
+        val select = findViewById<Button>(R.id.next)
 
 
-        fun mostrarcoche(coche: Cars) {
-            carGif.setImageResource(coche.design)
-            acceleration.progress = coche.aceleracion
-            maxSpeed.progress = coche.velocidadMaxima
-            deceleration.progress = coche.desaceleracion
-            fuel.progress = coche.gasolina
-            name.text = coche.nombre
-            sw_acc.text = coche.aceleracion.toString()
-            sw_dece.text = coche.desaceleracion.toString()
-            sw_fuel.text = coche.gasolina.toString()
-            sw_maxspeed.text = coche.velocidadMaxima.toString()
+        fun showCar(coche: Cars) {
+            carGif.setImageResource(coche.Image)
+            acceleration.progress = coche.accelerate
+            maxSpeed.progress = coche.maxSpeed
+            deceleration.progress = coche.brake
+            fuel.progress = coche.fuel
+            name.text = coche.name
+            swacc.text = coche.accelerate.toString()
+            swdece.text = coche.brake.toString()
+            swfuel.text = coche.fuel.toString()
+            swmaxspeed.text = coche.maxSpeed.toString()
         }
 
 
 
-        var posicion = 0
-        val BowserCar = Cars("Bowser", 100, 4, 10, 90, R.drawable.coche1)
-        val PeachCar = Cars("Peach", 80, 10, 4, 70, R.drawable.coche2)
-        val DonkeyCar = Cars("Donkey Kong", 100, 20, 10, 100, R.drawable.coche3)
-        val MarioCar = Cars("Mario", 80, 10, 10, 60, R.drawable.coche4)
-        val LuigiCar = Cars("Luigi", 95, 12, 8, 50, R.drawable.coche5)
-        arrayCar.add(BowserCar)
-        arrayCar.add(PeachCar)
-        arrayCar.add(DonkeyCar)
-        arrayCar.add(MarioCar)
-        arrayCar.add(LuigiCar)
+        var position = 0
+        
+        val bowserCar = Cars("Bowser", 100, 4, 10, 90, R.drawable.coche1)
+        val peachCar = Cars("Peach", 80, 10, 4, 70, R.drawable.coche2)
+        val donkeyCar = Cars("Donkey Kong", 100, 20, 10, 100, R.drawable.coche3)
+        val marioCar = Cars("Mario", 80, 10, 10, 60, R.drawable.coche4)
+        val luigiCar = Cars("Luigi", 95, 12, 8, 50, R.drawable.coche5)
 
 
-        mostrarcoche(arrayCar[posicion])
+        arrayCar.add(bowserCar)
+        arrayCar.add(peachCar)
+        arrayCar.add(donkeyCar)
+        arrayCar.add(marioCar)
+        arrayCar.add(luigiCar)
 
+        showCar(arrayCar[position])
 
-
-        next_car.setOnClickListener {
-            posicion++
-            if (posicion < arrayCar.size) {
-                mostrarcoche(arrayCar[posicion])
+        nextcar.setOnClickListener {
+            position++
+            if (position < arrayCar.size) {
+                showCar(arrayCar[position])
             } else {
-                posicion = 0
-                mostrarcoche(arrayCar[posicion])
+                position = 0
+                showCar(arrayCar[position])
             }
         }
-        previous_car.setOnClickListener {
-            posicion--
-            if (posicion < 0) {
-                posicion = arrayCar.size - 1
-                mostrarcoche(arrayCar[posicion])
+        previouscar.setOnClickListener {
+            position--
+            if (position < 0) {
+                position = arrayCar.size - 1
+                showCar(arrayCar[position])
             } else {
-                mostrarcoche(arrayCar[posicion])
+                showCar(arrayCar[position])
             }
         }
+
 
 
 

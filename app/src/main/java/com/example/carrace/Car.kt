@@ -1,8 +1,4 @@
 package com.example.carrace
 
-class Cars (val nombre:String, val velocidadMaxima:Int,val aceleracion:Int,val desaceleracion:Int,val gasolina:Int,val design:Int) {
-
-
-
-
+class Cars (val name:String, val maxSpeed:Int,val accelerate:Int,val brake:Int,val fuel:Int,val Image:Int) {
 }

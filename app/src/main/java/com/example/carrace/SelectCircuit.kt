@@ -1,12 +1,11 @@
 package com.example.carrace
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class SelectCircuit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,24 +16,29 @@ class SelectCircuit : AppCompatActivity() {
         val arrayCircuit = mutableListOf<Circuit>()
         val circuit = findViewById<ImageButton>(R.id.circuit)
         val name = findViewById<TextView>(R.id.name)
-        val next_circuit = findViewById<ImageButton>(R.id.arrow_post)
-        val previous_circuit = findViewById<ImageButton>(R.id.arrow_ant)
+        val nextCircuit = findViewById<ImageButton>(R.id.arrow_post)
+        val previousCircuit = findViewById<ImageButton>(R.id.arrow_ant)
         val next = findViewById<Button>(R.id.next)
 
 
-        fun mostrarcircuit(coche: Circuit) {
+        next.setOnClickListener {
+            val cambiando= Intent(this,SelectCar::class.java)
+            startActivity(cambiando)
+        }
+
+        fun showcircuit(coche: Circuit) {
             name.text = coche.nombre
             circuit.setImageResource(coche.image)
         }
 
 
 
-        var posicion = 0
-        val circuit1 = Circuit("Isla Choco", R.drawable.circuito1)
-        val circuit2 = Circuit("Playa Koopa", R.drawable.circuito2)
-        val circuit3 = Circuit("Castillo de Bowser", R.drawable.circuito3)
-        val circuit4 = Circuit("Prado Rosquilla", R.drawable.circuito4)
-        val circuit5 = Circuit("Valle Fantasma", R.drawable.circuito5)
+        var position = 0
+        val circuit1 = Circuit("Isla Choco", R.drawable.circuito1, 2000)
+        val circuit2 = Circuit("Playa Koopa", R.drawable.circuito2, 1000)
+        val circuit3 = Circuit("Castillo de Bowser", R.drawable.circuito3, 1500)
+        val circuit4 = Circuit("Prado Rosquilla", R.drawable.circuito4, 500)
+        val circuit5 = Circuit("Valle Fantasma", R.drawable.circuito5, 700)
 
 
         arrayCircuit.add(circuit1)
@@ -43,26 +47,26 @@ class SelectCircuit : AppCompatActivity() {
         arrayCircuit.add(circuit4)
         arrayCircuit.add(circuit5)
 
-        mostrarcircuit(arrayCircuit[posicion])
+        showcircuit(arrayCircuit[position])
 
 
 
-        next_circuit.setOnClickListener {
-            posicion++
-            if (posicion < arrayCircuit.size) {
-                mostrarcircuit(arrayCircuit[posicion])
+        nextCircuit.setOnClickListener {
+            position++
+            if (position < arrayCircuit.size) {
+                showcircuit(arrayCircuit[position])
             } else {
-                posicion = 0
-                mostrarcircuit(arrayCircuit[posicion])
+                position = 0
+                showcircuit(arrayCircuit[position])
             }
         }
-        previous_circuit.setOnClickListener {
-            posicion--
-            if (posicion < 0) {
-                posicion = arrayCircuit.size - 1
-                mostrarcircuit(arrayCircuit[posicion])
+        previousCircuit.setOnClickListener {
+            position--
+            if (position < 0) {
+                position = arrayCircuit.size - 1
+                showcircuit(arrayCircuit[position])
             } else {
-                mostrarcircuit(arrayCircuit[posicion])
+                showcircuit(arrayCircuit[position])
             }
         }
 

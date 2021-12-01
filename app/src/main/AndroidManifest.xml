@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarRace">
         <activity
+            android:name=".RaceStart"
+            android:exported="false" />
+        <activity
             android:name=".SelectDriver"
             android:exported="false" />
         <activity
