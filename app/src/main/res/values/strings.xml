@@ -2,8 +2,7 @@
     <string name="app_name">CarRace</string>
     <string name="maxspeed">MaxSpeed</string>
     <string name="acceleration">Acceleration</string>
-    <string name="deceleration">Deceleration</string>
-    <string name="fuel">Fuel</string>
+    <string name="stability">Stability</string>
     <string name="description">Description</string>
     <string name="concesionario">Concesionario</string>
     <string name="play">Play</string>
