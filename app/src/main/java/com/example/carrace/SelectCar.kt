@@ -8,14 +8,14 @@ import pl.droidsonroids.gif.GifImageView
 
 var positionCar = 0
 val arrayCar = mutableListOf<Cars>()
+
 val bowserCar = Cars("Bowser", 100, 4,2, R.drawable.coche1)
 val peachCar = Cars("Peach", 80, 10,4, R.drawable.coche2)
-val donkeyCar = Cars("Donkey Kong", 100, 20,5, R.drawable.coche3)
+val donkeyCar = Cars("Donkey Kong", 100, 20,1, R.drawable.coche3)
 val marioCar = Cars("Mario", 80, 10,5, R.drawable.coche4)
 val luigiCar = Cars("Luigi", 95, 12,3, R.drawable.coche5)
 
-
-var racePlayer = ""
+lateinit var carPlayer: String
 val raceCars = arrayCar
 
 
@@ -63,6 +63,8 @@ class SelectCar : AppCompatActivity() {
         arrayCar.add(marioCar)
         arrayCar.add(luigiCar)
 
+
+
         showCar(arrayCar[positionCar])
 
         nextcar.setOnClickListener {
@@ -84,8 +86,8 @@ class SelectCar : AppCompatActivity() {
             }
         }
         select.setOnClickListener {
-            val cambiando = Intent(this, Race::class.java)
-            racePlayer = arrayCar[positionCar].name
+            val cambiando = Intent(this, RaceStart::class.java)
+            carPlayer = arrayCar[positionCar].name
             startActivity(cambiando)
         }
     }

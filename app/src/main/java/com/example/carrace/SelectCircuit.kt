@@ -64,9 +64,6 @@ class SelectCircuit : AppCompatActivity() {
 
         next.setOnClickListener {
             val cambiando = Intent(this, SelectCar::class.java)
-            val pista = Bundle()
-            pista.putInt("Circuit", arrayCircuit[positionCircuit].Distance)
-            cambiando.putExtras(pista)
             startActivity(cambiando)
         }
 
