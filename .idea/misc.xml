@@ -4,15 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/DAM/2DAM/PMDM/AndroidStudio/CarRace/app/src/main/res/layout/activity_menu.xml" value="0.33" />
+        <entry key="..\:/DAM/2DAM/PMDM/AndroidStudio/CarRace/app/src/main/res/layout/activity_prepare_race.xml" value="0.275" />
+        <entry key="..\:/DAM/2DAM/PMDM/AndroidStudio/CarRace/app/src/main/res/layout/activity_race.xml" value="0.25" />
         <entry key="..\:/DAM/2DAM/PMDM/AndroidStudio/CarRace/app/src/main/res/layout/activity_select_car.xml" value="0.33" />
         <entry key="..\:/DAM/2DAM/PMDM/AndroidStudio/CarRace/app/src/main/res/layout/activity_select_circuit.xml" value="0.22" />
         <entry key="..\:/DAM/2DAM/PMDM/AndroidStudio/CarRace/app/src/main/res/layout/activity_select_driver.xml" value="0.275" />
         <entry key="..\:/DAM/2DAM/PMDM/AndroidStudio/CarRace/app/src/main/res/layout/activity_slider_car.xml" value="0.25" />
-        <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace/app/src/main/res/layout/activity_prepare_race.xml" value="0.12291666666666666" />
-        <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace/app/src/main/res/layout/activity_race.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace/app/src/main/res/layout/activity_select_car.xml" value="0.264" />
-        <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace/app/src/main/res/layout/activity_select_circuit.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace2/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace2/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Sergio/Documents/AndroidStudio/CarRace2/app/src/main/res/layout/activity_slider_car.xml" value="0.4" />

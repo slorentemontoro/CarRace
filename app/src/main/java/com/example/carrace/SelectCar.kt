@@ -5,17 +5,18 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import pl.droidsonroids.gif.GifImageView
+import kotlin.properties.Delegates
 
 var positionCar = 0
 val arrayCar = mutableListOf<Cars>()
 
-val bowserCar = Cars("Bowser", 100, 4,2, R.drawable.coche1)
-val peachCar = Cars("Peach", 80, 10,4, R.drawable.coche2)
-val donkeyCar = Cars("Donkey Kong", 100, 20,1, R.drawable.coche3)
-val marioCar = Cars("Mario", 80, 10,5, R.drawable.coche4)
-val luigiCar = Cars("Luigi", 95, 12,3, R.drawable.coche5)
+val bowserCar = Cars("Bowser",0, 100, 4,2, R.drawable.coche1,0)
+val peachCar = Cars("Peach",0, 80, 10,4, R.drawable.coche2,0)
+val donkeyCar = Cars("Donkey Kong",0, 100, 20,1, R.drawable.coche3,0)
+val marioCar = Cars("Mario",0, 80, 10,5, R.drawable.coche4,0)
+val luigiCar = Cars("Luigi",0, 95, 12,3, R.drawable.coche5,0)
 
-lateinit var carPlayer: String
+lateinit var carPlayerName: String
 val raceCars = arrayCar
 
 
@@ -38,8 +39,8 @@ class SelectCar : AppCompatActivity() {
         val select = findViewById<Button>(R.id.next)
 
 
-        var distance = findViewById<TextView>(R.id.textView6)
-        var bundle = intent.extras
+        val distance = findViewById<TextView>(R.id.textView6)
+        val bundle = intent.extras
         distance.text = bundle?.getInt("Circuit").toString()
 
         fun showCar(coche: Cars) {
@@ -87,7 +88,7 @@ class SelectCar : AppCompatActivity() {
         }
         select.setOnClickListener {
             val cambiando = Intent(this, RaceStart::class.java)
-            carPlayer = arrayCar[positionCar].name
+            carPlayerName = arrayCar[positionCar].name
             startActivity(cambiando)
         }
     }

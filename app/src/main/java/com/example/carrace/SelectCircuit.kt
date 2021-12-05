@@ -16,6 +16,7 @@ val circuit3 = Circuit("Castillo de Bowser", R.drawable.circuito3, 1500)
 val circuit4 = Circuit("Prado Rosquilla", R.drawable.circuito4, 500)
 val circuit5 = Circuit("Valle Fantasma", R.drawable.circuito5, 700)
 
+lateinit var raceCircuit: Circuit
 
 class SelectCircuit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,6 +65,7 @@ class SelectCircuit : AppCompatActivity() {
 
         next.setOnClickListener {
             val cambiando = Intent(this, SelectCar::class.java)
+            raceCircuit = arrayCircuit[positionCircuit]
             startActivity(cambiando)
         }
 

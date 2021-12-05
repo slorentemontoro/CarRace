@@ -7,23 +7,101 @@
     android:background="@drawable/backgroundmenu"
     tools:context=".RaceStart">
 
-    <TextView
-        android:id="@+id/race"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/winnerImage"
+        android:layout_width="108dp"
+        android:layout_height="97dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.738"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/winner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.817" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="353dp"
+        android:layout_height="39dp"
+        android:thumb="@drawable/coche1_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <SeekBar
+        android:id="@+id/Peach"
+        android:layout_width="361dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="182dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="515dp"
+        android:max="100"
+        android:progress="0"
+        android:thumb="@drawable/coche2_0"
+        android:thumbTintMode="src_over"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/DK"
+        android:layout_width="361dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="465dp"
+        android:max="100"
+        android:progress="0"
+        android:thumb="@drawable/coche3_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/Mario"
+        android:layout_width="361dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="281dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="416dp"
+        android:max="100"
+        android:progress="0"
+        android:thumb="@drawable/coche4_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/Luigi"
+        android:layout_width="361dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="367dp"
+        android:max="100"
+        android:progress="0"
+        android:thumb="@drawable/coche5_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
