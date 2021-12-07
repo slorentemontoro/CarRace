@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarRace">
         <activity
+            android:name=".Winner"
+            android:exported="false" />
+        <activity
             android:name=".PrepareRace"
             android:exported="false" />
         <activity
